@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<title>Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="w3.css">
+
+<style>
+    body
+    {
+        min-height: 100vh;
+        background-color: black;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .bar
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body .btn
+    {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    body .bttn
+    {
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    body .welcome
+    {
+        display: block;
+        position: absolute;
+        top: 80%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: Impact;
+        font-size: 8vh;
+        text-shadow: 2px 2px black;
+    }
+    body .trailer
+    {
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+    }
+    body .btnn 
+    {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        margin: 4px 2px;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .btnn:hover {opacity: 0.6}
+
+    body .commun
+    {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: Impact;
+        font-size: 8vh;
+        text-shadow: 2px 2px black;
+    }
+    .imgg
+    {
+        width: 100%;
+        padding: 78px 0px;
+    }
+    .imgg img
+    {
+        height: auto;
+        width: 45%;
+    }
+    .text-1
+    {
+        width: 550px;
+    }
+    .main-1
+    {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    .main-2
+    {
+        width: 1130px;
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    ul 
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover
+    {
+        background-color: green;
+    }
+    .buttt
+    {
+        background-color: green;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .buttt:hover {opacity: 1}
+    body .mch
+    {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: Impact;
+        font-size: 8vh;
+        text-shadow: 2px 2px black;
+    }
+    body .load
+    {
+        position: absolute;
+        top: 48%;
+        left: 43%;
+        transform: translate(-50%, -50%);
+    }
+    body .MC
+    {
+        background-color: rgba(187, 187, 187, 0.973);
+    }
+    body .DP
+    {
+        background-color: rgba(25, 0, 53, 0.973);
+    }
+    body .leg
+    {
+        background-color: rgb(1, 195, 230);
+    }
+    body .spring
+    {
+        background-color: #ede5e2;
+    }
+
+    .about-us
+    {
+        height: 100vh;
+        width: 100%;
+        padding: 90px 0;
+        background: #ddd;
+    }
+    .pic
+    {
+        height: auto;
+        width:  302px;
+    }
+    .about
+    {
+        width: 1130px;
+        max-width: 85%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .text
+    {
+        width: 540px;
+    }
+    .text h2
+    {
+        font-size: 90px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .text h5{
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    span{
+        color: #4070f4;
+    }
+    .text p{
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+    .data{
+        margin-top: 30px;
+    }
+    .hire{
+        font-size: 18px;
+        background: #4070f4;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        padding: 8px 25px;
+        border-radius: 6px;
+        transition: 0.5s;
+    }
+    .hire:hover{
+        background: #000;
+        border: 1px solid #4070f4;
+    }   
+    
+</style>
+<body>
+    <div class="bann" style="display: flex;">
+        <img src="head.jpg" style="width: 210vh; height: 45vh;">
+        </div>
+        <div class="bar w3-bar w3-white">
+            <button class="btn w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="openButton('home')">Home</button>
+            <button class="btn w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="openButton('comm')">Community</button>
+            <button class="btn w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="openButton('mer')">Merch</button>
+            <div class="w3-dropdown-hover">
+                <button class="btn w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green">Games</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-bottombar w3-border-green w3-hover-text-green">
+                        <button class="w3-bar-item w3-button" onclick="openButton('MINE')">MINECRAFT</button>
+                        <button class="w3-bar-item w3-button" onclick="openButton('DUNG')">MINECRAFT DUNGEONS</button>
+                        <button class="w3-bar-item w3-button" onclick="openButton('LEGE')">MINECRAFT LEGENDS</button>
+                    </div>
+            </div>
+            <button class="btn w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="openButton('support')">Support</button>
+        </div>
+        
+           
+        <div id="home" class="buttonn w3-animate-opacity" style="display:block">
+            <center>
+                <img class="hm" src="home.jpg" style="width: 160vh; height: 80vh;">
+            </center>
+            <div class="welcome">
+                <p>WELCOME TO THE OFFICIAL<p> SITE OF MINECRAFT</p></p>
+            </div>
+            <br>
+            <div class="w3-white w3-center">
+                <br>
+                <h2><b>EXPLORE MINECRAFT GAMES</b></h2>
+                <br>
+                    <center>
+                    <table><tr><td>
+                        <div class="w3-panel">
+                        <button class="btnn" onclick="openButton('MINE')"><img src="game1.jpg" width="240px"></button>
+                        <center>
+                        <h2>Minecraft</h2>
+                        <p>Explore your own unique world</p>
+                        <p>survive the night, and create</p>
+                        <p>anything you can imagine!</p></center></div>
+                        </td>
+
+                        <td>
+                        <div class="w3-panel">
+                        <button class="btnn" onclick="openButton('DUNG')"><img src="game2.jpg" width="240px"></button>
+                        <center>
+                        <h2>Minecraft Dungeons</h2>
+                        <p>Discover an all-new action</p>
+                        <p>adventure game, inspired by</p>
+                        <p>classic dungeon crawlers!</p></center></div>
+                        </td>
+
+                        <td>
+                        <div class="w3-panel">
+                        <button class="btnn" onclick="openButton('LEGE')"><img src="game3.jpg" width="240px"></button>
+                        <center>
+                        <h2>Minecraft Legends</h2>
+                        <p>Uncover the mysteries of</p>
+                        <p>Minecraft Legends, a new action</p>
+                        <p>strategy game.</p></center></div>
+                        </td></tr>
+                    </table>
+                    </center>
+                </div>
+                <br>
+                <br>
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mDON0_aQN1M">
+                    </iframe>
+                </div> 
+                <div class="w3-white w3-center">
+                    <br>
+                    <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+
+        <div id="comm" class="buttonn w3-animate-bottom" style="display:none">
+            <center>
+                <img src="com.jpg" style="width: 160vh; height: 80vh;">
+                <div class="commun w3-animate-opacity">
+                    <p>WELCOME TO THE<p>MINECRAFT COMMUNITY</p></p>
+                </div>
+            </center>
+            <div class="bar w3-bar-item w3-white">
+                <ul>
+                <li><a href="#PLAYERS">FOR NEW PLAYERS</a></li>
+                <li><a href="#YTB">YOUTUBE</a></li>
+                <li><a href="#HELP">DISCUSSIONS & HELP</a></li>
+                </ul>
+            </div>
+                
+            <div class="w3-white w3-center">
+                <br>
+                <img src="https://www.minecraft.net/content/dam/minecraft/community/flyingheroes.png">
+                <h2><b>RESOURCES FOR NEW PLAYERS</b></b></h2>
+                <section id="PLAYERS">
+                <section class="imgg">
+                    <div class="main-1">
+                        <img src="https://www.minecraft.net/content/dam/community/fy21/minecraft/newplayerarea/Support_NPA.jpg.transform/minecraft-image-small/image.jpg">
+                        <div class="text-1">
+                            <h2><b>GET HELP WITH MINECRAFT</b></h2>
+                            <p>Find answer for all of your Minecraft questions.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="main-2">
+                        <div class="text-1">
+                            <h2><b>HOW TO SUBMIT FEEDBACK</b></h2>
+                            <p>We need your feedback to help our team find out about the things that</p>
+                            <p>matter to you the most and what you want to see in Minecraft.</p>
+                        </div>
+                        <img src="https://www.minecraft.net/content/dam/community/fy21/minecraft/newplayerarea/Feedback_NPA.png.transform/minecraft-image-large/image.png">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="main-1">
+                        <img src="https://www.minecraft.net/content/dam/community/fy21/minecraft/newplayerarea/bugsite_NPA.png.transform/minecraft-image-large/image.png">
+                        <div class="text-1">
+                            <h2><b>BUG US ABOUT BUGS</b></h2>
+                            <p>Sometimes bugs can come along and spoil everything. That’s why we</p>
+                            <p>want you to log bugs so the Minecraft team can fix them asap.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="main-2">
+                        <div class="text-1">
+                            <h2><b>GET STARTED WITH REDSTONE</b></h2>
+                            <p>Redstone unlocks limitless capabilities in Minecraft and the growing</p>
+                            <p>Redstone community is here help.</p>
+                        </div>
+                        <img src="https://www.minecraft.net/content/dam/community/fy21/minecraft/newplayerarea/redstone1-npa.jpg.transform/minecraft-image-large/image.jpg">
+                    </div>
+                    </div>
+                </section>
+            </section>
+            <br>
+            <br>
+            <section id="YTB">
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w6zLprHHZOk">
+                    </iframe>
+                </div>
+            </section>
+            <br>
+            <br>
+            <section id="HELP">
+            <div class="w3-white w3-center">
+                <br>
+                <h2><b>DISCUSSIONS & HELP</b></h2>
+                <br>
+                <div class="w3-panel">
+                    <a href="https://discord.gg/minecraft">
+                      <button class="buttt">MINECRAFT ON DISCORD</button>
+                    </a>
+                </div>
+                <br>
+            </div>
+            </section>
+            <div class="w3-white w3-center">
+                <br>
+                <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+        
+
+        <div id="mer" class="buttonn w3-animate-right" style="display:none">
+            <center>
+                <img src="merc.png" style="width: 160vh; height: 80vh;">
+                <div class="mch w3-animate-opacity">
+                    <p>COMING SOON</p>
+                </div>
+                <div class="load w3-spin">
+                    <img src="load.png">
+                </div>
+            </center>
+            <div class="w3-white w3-center">
+                <br>
+                <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+
+        <div id="MINE" class="buttonn w3-animate-left" style="display:none">
+            <center>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Xbox_Minecraft_WildUpdate_Main_.Net_1170x500.jpg" style="width: 180vh; height: 80vh;">
+            </center>
+            <div class="bar w3-bar-item w3-white">
+                <ul>
+                <li><a href="#CREATE">PLAY TO CREATE</a></li>
+                <li><a href="#SURVIVE">PLAY TO SURVIVE</a></li>
+                <li><a href="#FRIENDS">PLAY WITH FRIENDS</a></li>
+                </ul>
+            </div>
+            <div class="w3-white w3-center">
+                
+            <section class="imgg">
+                <section id="CREATE">
+                <div class="main-1">
+                    <img src="https://compass-ssl.xbox.com/assets/c9/e7/c9e70818-ef01-47d2-a458-bb62da5aeaea.jpg?n=Parent_Landing_Module_1040x585.jpg">
+                    <div class="text-1">
+                        <h2><b>PLAY TO CREATE</b></h2>
+                        <p>If you can dream it, you can build it. Put your imagination and limitless</p>
+                        <p>resources to work with Creative Mode.</p>
+                    </div>
+                </div>
+                </section>
+                <br>
+                <br>
+                <br>
+                <section id="SURVIVE">
+                <div class="main-2">
+                    <div class="text-1">
+                        <h2><b>PLAY TO SURVIVE</b></h2>
+                        <p>Battle mobs, construct shelter, and explore the landscape—it’s all in a day’s</p>
+                        <p>work when you try to survive and thrive in Survival Mode.</p>
+                    </div>
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/minecraft-ender-dragon.jpg?q=50&fit=contain&w=943&h=&dpr=1.5">
+                </div>
+                </section>
+                <br>
+                <br>
+                <br>
+                <section id="FRIENDS">
+                <div class="main-1">
+                    <img src="https://www.pcgamesn.com/wp-content/sites/pcgamesn/2021/01/minecraft-youtubers-best-550x309.jpg">
+                    <div class="text-1">
+                        <h2><b>PLAY WITH FRIENDS</b></h2>
+                        <p>Build together, search together, have fun together! The world of Minecraft is</p>
+                        <p>even better when explored with your best buds.</p>
+                    </div>
+                </div>
+                </section>
+            </section>
+            </div>
+            <div class="MC">
+                <center>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/playtheway-minecraft.png.transform/minecraft-image-large/image.png" style="width: 160vh; height: 70vh;">
+                <div>
+                    <h2><b>PLAY THE WAY YOU WANT</b></h2>
+                    <p>Playing Minecraft on your favorite devices is so easy! And so fun!</p>
+                </div>
+                </center>
+                <br>
+            </div>
+            <div class="w3-white w3-center">
+                <br>
+                <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+
+        <div id="DUNG" class="buttonn w3-animate-bottom" style="display:none">
+            <center>
+                <img src="https://d28ipuewd7cdcq.cloudfront.net/assets/article/2020/06/04/sp-minecraft-dungeons-switch-hero_feature.jpeg" style="width: 180vh; height: 80vh;">
+            </center>
+            <br>
+            <center>
+            <div class="DP">
+                <br>
+                <img src="https://www.pluggedin.com/wp-content/uploads/2020/05/Minecraft-Dungeons-WP.jpg" style="width: 140vh; height: 70vh;">
+                <div class="w3-text-white">
+                    <h2><b>UNITE. FIGHT. SURVIVE.</b></h2>
+                    <p>Brave the dungeons alone, or team up with</p>
+                    <p>friends! Up to four players can battle together</p>
+                    <p>through action-packed, treasure-stuffed, wildly</p>
+                    <p>varied levels—all in an epic quest to save the</p>
+                    <p>villagers and take down the evil Arch-Illager!</p>
+                </div>
+                <br>
+            </div>
+            </center>
+            <div class="w3-white w3-center">
+                <br>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/MCD-PMP_Seasonal-Adventures_Feature-Image_1110x500.jpg.transform/minecraft-image-large/image.jpg" style="width: 120vh; height: 60vh;">
+                <h2><b>THE ADVENTURE CONTINUES!</b></h2>
+                <p>The journey continues as Seasonal Adventures—free, themed events—up</p>
+                <p>the ante in Minecraft Dungeons. Join weekly challenges to earn Adventure</p>
+                <p>Points and work towards unlocking exclusive rewards, through an all-new</p>
+                <p>progression system.</p>
+            <section class="imgg">
+                <div class="main-1">
+                    <img src="https://www.minecraft.net/content/dam/games/dungeons/key-art/MC-Homepage_Media-Block-0_S3-Fauna-Faire_600x360.jpg.transform/minecraft-image-large/image.jpg">
+                    <div class="text-1">
+                        <h2><b>COME TOGETHER AT THE FAIRE!</b></h2>
+                        <p>Fauna Faire is setting up camp, bringing with it both blazing activities</p>
+                        <p>and fun festivities. Unite with friends and take on new challenges</p>
+                        <p>together.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="main-2">
+                    <div class="text-1">
+                        <h2><b>TIME TO SHINE, ADVENTURER!</b></h2>
+                        <p>Explore the Tower by night and in a whole new light, with floors that</p>
+                        <p>feature mysterious murals, perplexing puzzles, and fiery foes.</p>
+                    </div>
+                    <img src="https://www.minecraft.net/content/dam/games/dungeons/key-art/MinecraftDungeons_S2LuminousNight_.net_600x360.png.transform/minecraft-image-large/image.png">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="main-1">
+                    <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/MCD-PMP_Seasonal-Adventures_Media-Block_Season-1_600x360.jpg.transform/minecraft-image-large/image.jpg">
+                    <div class="text-1">
+                        <h2><b>ASCEND TO NEW HEIGHTS!</b></h2>
+                        <p>Rise to the challenge in Cloudy Climb—Minecraft Dungeons first</p>
+                        <p>Seasonal Adventure, featuring seasonal-exclusive rewards and a new,</p>
+                        <p>mysterious tower.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h2><b>EXPAND YOUR WORLD</b></h2>
+                <br>
+                <br>
+                <div class="main-2">
+                    <div class="text-1">
+                        <h2><b>FIND A NEW PERSPECTIVE</b></h2>
+                        <p>In our community of millions, someone is always ready with fresh</p>
+                        <p>inspiration and news of the latest creations and releases.</p>
+                        <br>
+                        <button class="buttt" onclick="openButton('comm')">JOIN THE COMMUNITY</button>
+                    </div>
+                    <img src="https://www.minecraft.net/content/dam/games/dungeons/game-characters/Dungeons%20characters%20group%20of%204.jpg.transform/minecraft-image-large/image.jpg">
+                </div>
+                </div>
+            </section>
+            <div class="w3-white w3-center">
+                <br>
+                <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+        <div id="LEGE" class="buttonn w3-animate-right" style="display:none">
+            <center>
+                <img src="https://minecraft.fr/wp-content/uploads/2022/06/minecraft-legends-nouveau-jeu-minecraft-melant-action-et-strategie-1240x640.jpeg" style="width: 180vh; height: 80vh;">
+                <div class="w3-text-white">
+                    <h2><b>UNITE THE OVERWORLD</b></h2>
+                    <p>Discover the mysteries of Minecraft Legends, a new action strategy game.</p>
+                    <p>Lead your allies in heroic battles to defend the Overworld from the</p>
+                    <p>destructive piglins.</p>
+                    <br>
+                    <h4>COMING SPRING 2023</h4>
+                </div>
+            </center>
+            <br>
+            <br>
+            <br>
+            <center>
+            <div class="leg">
+                <br>
+                <br>
+                <img src="https://www.minecraft.net/content/dam/games/badger/key-art/MC_Badger-Gather-Your-Strength_1200x540.png.transform/minecraft-image-large/image.png" style="width: 140vh; height: 70vh;">
+                <div>
+                    <br>
+                    <h2><b>GATHER YOUR STRENGTH</b></h2>
+                    <p>Explore a familiar yet mysterious land, full of diverse life, lush biomes, and</p>
+                    <p>rich resources. But this paradise is on the brink of destruction. The piglins</p>
+                    <p>have arrived—and they’re threatening to corrupt the Overworld.</p>
+                    <br>
+                </div>
+                <br>
+                <img src="https://www.minecraft.net/content/dam/games/badger/key-art/MC_Badger-Defeat-Piglins_1200x540.png.transform/minecraft-image-large/image.png" style="width: 140vh; height: 70vh;">
+                <div>
+                    <br>
+                    <h2><b>DEFEAT THE PIGLINS</b></h2>
+                    <p>Inspire unexpected friends to form valuable alliances and lead them in</p>
+                    <p>strategic battles to protect their home. Take the fight to the piglins before</p>
+                    <p>their Nether corruption devours the Overworld!</p>
+                    <br>
+                </div>
+                <br>
+                <img src="https://www.minecraft.net/content/dam/games/badger/key-art/MC_Badger-Downloadable_1200x650.png.transform/minecraft-image-large/image.png" style="width: 140vh; height: 70vh;">
+                <div>
+                    <br>
+                    <h2><b>MINECRAFT LEGENDS WALLPAPERS</b></h2>
+                    <p>Bring the battle for the Overworld to your favorite device with these free hi-</p>
+                    <p>res images.</p>
+                    <br>
+                    <a href="https://www.minecraft.net/content/dam/games/badger/software/Minecraft-Legends-Wallpapers.zip">
+                        <button class="buttt">DOWNLOAD NOW</button>
+                      </a>
+                      
+                </div>
+                <br>
+            </div>
+            <div class="spring">
+                <br>
+                <h2><b>MINECRAFT LEGENDS COMING SPRING 2023</b></h2>
+                <img src="https://www.minecraft.net/content/dam/games/badger/logos/Legends_Media-Block-Image-0_Platform-Logos_1200x310.jpg.transform/minecraft-image-large/image.jpg">
+            </div>
+            </center>
+            <div class="w3-white w3-center">
+                <br>
+                <p><b>Created by Nable</b></p>
+                <br>         
+            </div>
+        </div>
+
+        <div id="support" class="buttonn w3-animate-zoom" style="display:none">
+        <section class="about-us">
+            <div class="about">
+              <img src="myimage.png" class="pic">
+              <div class="text">
+                <h2>About Us</h2>
+                <h5>Mochamad Nabil Ramdhani <span>Designer</span></h5>
+                <table>
+                    <tr><td>NIM <td>: 10122094
+                    <tr><td>Kelas <td>: IF - 3
+                </table>
+                <div class="data">
+                <a href="https://www.youtube.com/@NableStances" class="hire">SUBSCRIBE ME!</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        <div class="w3-white w3-center">
+            <br>
+            <p><b>Created by Nable</b></p>
+            <br>         
+        </div>
+          </div>
+<script>
+        function openButton(buttonn) {
+        var i;
+        var x = document.getElementsByClassName("buttonn");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+        }
+        document.getElementById(buttonn).style.display = "block"; 
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior : "smooth"
+                });
+            });
+        });
+
+</script>
+</body>
+</html>
